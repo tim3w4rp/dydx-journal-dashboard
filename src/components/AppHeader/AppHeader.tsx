@@ -12,7 +12,7 @@ const AppHeader = () => (
     borderColor="gray.400"
     justifyContent="right"
   >
-    <Stack align="center" direction="row" spacing="36px">
+    <Stack align="center" direction="row" spacing="24px">
       <ColorModeToggle />
       <ConnectWallet />
     </Stack>
