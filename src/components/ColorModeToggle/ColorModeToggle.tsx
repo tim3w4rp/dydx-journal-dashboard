@@ -1,13 +1,17 @@
 import { Spacer, Stack, Switch, useColorMode } from '@chakra-ui/react'
-import { SunIcon } from '@chakra-ui/icons'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 
 const ColorModeToggle = () => {
-  const { toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
-    <Stack align="center" direction="row" spacing="4px">
-      <Switch onChange={toggleColorMode}></Switch>
+    <Stack align="center" direction="row" spacing="6px">
+      <Switch alignItems="center" onChange={toggleColorMode} />
       <Spacer />
-      <SunIcon boxSize={5} />
+      {colorMode === 'light' ? (
+        <MoonIcon boxSize={5} />
+      ) : (
+        <SunIcon boxSize={5} />
+      )}
     </Stack>
   )
 }
